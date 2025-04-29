@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Press Start 2P', cursive;
+    background: url('../img/Mockup\ -\ \ QuizCN.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quiz-container {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid #4caf50;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+    padding: 50px 30px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Imagem borrada no centro do card */
+  .quiz-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: url('../img/proejto.png') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    filter: blur(8px);
+    z-index: 0;
+  }
+  
+  .question {
+    font-size: 18px;
+    color: #c8f8c4;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Botões com cores inspiradas na imagem */
+  .option {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 25px;
+    font-size: 14px;
+    background-color: #e98fa0; /* tom rosa do líquido */
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .option:nth-child(even) {
+    background-color: #9fd58f; /* tom verde do líquido */
+  }
+  
+  .option:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+  }
+  
+  .timer {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #c8f8c4;
+    text-shadow: 1px 1px 2px #000;
+    z-index: 2;
+  }
+  /* Botões de Navegação */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4caf50; /* Cor verde */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .button-container button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+  
+  .button-container button:disabled {
+    background-color: #888; /* Cor de desabilitado */
+    cursor: not-allowed;
+  }
+  
+  .button-container button#btnFinalizar {
+    background-color: #e98fa0; /* Cor para o botão 'Finalizar' */
+  }
+  
+  .button-container button#btnFinalizar:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+  }
+  
+  
